@@ -1,0 +1,28 @@
+// Cache yönetimi örneği
+
+// Cache yönetimi
+fegn Cache {
+    // Öğe ekle
+    set: ("user", "Ahmet", 3600) => {
+        Console.log("Kullanıcı önbelleğe alındı")
+    },
+    
+    // Öğe al
+    get: ("user") => {
+        Console.log("Kullanıcı önbellekten alındı")
+    },
+    
+    // Öğe değişikliği
+    onChange: ("user", (value) => {
+        Console.log("Kullanıcı değişti: " + value)
+    })
+}
+
+// Kullanıcı ekle
+Cache.set("user", "Ahmet", 3600)
+
+// Kullanıcı al
+Cache.get("user")
+
+// Önbelleği temizle
+Cache.clear()

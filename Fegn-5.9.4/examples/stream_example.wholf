@@ -1,0 +1,21 @@
+// Stream entegrasyonu örneği
+
+// Stream yönetimi
+fegn Stream {
+    // Öğe ekle
+    push: ("Merhaba") => {
+        Console.log("Yeni öğe eklendi")
+    },
+    
+    // Dinleyici ekle
+    on: ("message", (item) => {
+        Console.log("Yeni öğe: " + item.data)
+    })
+}
+
+// Öğe ekle
+Stream.push("Merhaba")
+
+// Stream durumu
+Console.log("Stream boş: " + Stream.isEmpty())
+Console.log("Stream boyutu: " + Stream.size())

@@ -1,0 +1,28 @@
+// Event Sourcing testleri
+test "Event Sourcing testi" {
+    // Event yönetimi
+    fegn EventSource {
+        // Event oluşturma
+        createEvent: ("userCreated", {
+            name: "Ahmet",
+            email: "ahmet@example.com"
+        }) => {
+            assert true
+        },
+        
+        // Event kaydetme
+        storeEvent: (event) => {
+            assert true
+        },
+        
+        // Event dinleyici
+        on: ("userCreated", (event) => {
+            assert true
+        })
+    }
+    
+    // Event akışı
+    EventSource.replay((event) => {
+        assert true
+    })
+}

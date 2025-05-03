@@ -1,0 +1,28 @@
+// Asenkron programlama örneği
+
+// Asenkron fonksiyon
+fegn Async {
+    // Görev ekle
+    addTask: (() => {
+        Console.log("Görev başladı")
+        // Görev işlemleri
+        Console.log("Görev tamamlandı")
+    }) => {
+        Console.log("Görev eklendi")
+    },
+    
+    // Tüm görevleri bekle
+    waitForAll: () => {
+        Console.log("Tüm görevler tamamlandı")
+    }
+}
+
+// Görev ekle
+Async.addTask(() => {
+    Console.log("Görev başladı")
+    // Görev işlemleri
+    Console.log("Görev tamamlandı")
+})
+
+// Tüm görevleri bekle
+Async.waitForAll()

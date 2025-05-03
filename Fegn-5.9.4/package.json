@@ -1,0 +1,54 @@
+{
+    "name": "Fegn",
+    "version": "5.9.4",
+    "description": "Wholf dilinde entegrasyon ve veri yönetimi için kullanılan en gelişmiş, modern ve güçlü kütüphane",
+    "main": "src/Fegn.hpp",
+    "dependencies": {
+        "wholf-core": ">= 5.0.0",
+        "wholf-utils": ">= 5.0.0",
+        "wholf-network": ">= 5.0.0",
+        "wholf-cache": ">= 5.0.0",
+        "wholf-stream": ">= 5.0.0",
+        "wholf-event": ">= 5.0.0",
+        "wholf-async": ">= 5.0.0",
+        "wholf-websocket": ">= 5.0.0",
+        "wholf-validation": ">= 5.0.0",
+        "wholf-error": ">= 5.0.0"
+    },
+    "devDependencies": {
+        "wholf-test": ">= 5.0.0",
+        "wholf-debug": ">= 5.0.0",
+        "wholf-lint": ">= 5.0.0",
+        "wholf-coverage": ">= 5.0.0"
+    },
+    "scripts": {
+        "test": "wholf test",
+        "build": "wholf build",
+        "lint": "wholf lint",
+        "coverage": "wholf coverage",
+        "docs": "wholf docs",
+        "benchmark": "wholf benchmark"
+    },
+    "keywords": [
+        "wholf",
+        "fegn",
+        "entegrasyon",
+        "veri",
+        "olay",
+        "websocket",
+        "cache",
+        "validator",
+        "async",
+        "stream",
+        "event-sourcing",
+        "modern",
+        "performance",
+        "developer-friendly"
+    ],
+    "author": "Wholf Development Team",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/wholf-lang/Fegn.git"
+    }
+}

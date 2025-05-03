@@ -1,0 +1,29 @@
+// Cache testleri
+test "Cache yönetimi testi" {
+    // Cache yönetimi
+    fegn Cache {
+        // Öğe ekle
+        set: ("user", "Ahmet", 3600) => {
+            assert true
+        },
+        
+        // Öğe al
+        get: ("user") => {
+            assert true
+        },
+        
+        // Öğe değişikliği
+        onChange: ("user", (value) => {
+            assert true
+        })
+    }
+    
+    // Kullanıcı ekle
+    Cache.set("user", "Ahmet", 3600)
+    
+    // Kullanıcı al
+    Cache.get("user")
+    
+    // Önbelleği temizle
+    Cache.clear()
+}

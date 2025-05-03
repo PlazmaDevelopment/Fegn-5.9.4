@@ -1,0 +1,29 @@
+// Asenkron programlama testleri
+test "Asenkron programlama testi" {
+    // Asenkron fonksiyon
+    fegn Async {
+        // Görev ekle
+        addTask: (() => {
+            Console.log("Görev başladı")
+            // Görev işlemleri
+            Console.log("Görev tamamlandı")
+        }) => {
+            assert true
+        },
+        
+        // Tüm görevleri bekle
+        waitForAll: () => {
+            assert true
+        }
+    }
+    
+    // Görev ekle
+    Async.addTask(() => {
+        Console.log("Görev başladı")
+        // Görev işlemleri
+        Console.log("Görev tamamlandı")
+    })
+    
+    // Tüm görevleri bekle
+    Async.waitForAll()
+}

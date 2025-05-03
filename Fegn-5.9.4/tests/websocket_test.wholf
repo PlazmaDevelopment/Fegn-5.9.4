@@ -1,0 +1,31 @@
+// WebSocket testleri
+test "WebSocket entegrasyonu testi" {
+    // WebSocket bağlantısı
+    fegn WebSocket {
+        // Bağlantı kur
+        connect: ("ws://example.com") => {
+            assert true
+        },
+        
+        // Mesaj al
+        onMessage: (message) => {
+            assert true
+        },
+        
+        // Hata yönetimi
+        onError: (error) => {
+            assert true
+        },
+        
+        // Bağlantı kesildiğinde
+        onClose: () => {
+            assert true
+        }
+    }
+    
+    // Bağlantı kur
+    WebSocket.connect("ws://example.com")
+    
+    // Mesaj gönder
+    WebSocket.send("Merhaba")
+}

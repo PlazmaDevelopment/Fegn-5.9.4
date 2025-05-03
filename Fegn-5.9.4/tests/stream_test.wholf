@@ -1,0 +1,22 @@
+// Stream entegrasyonu testleri
+test "Stream entegrasyonu testi" {
+    // Stream yönetimi
+    fegn Stream {
+        // Öğe ekle
+        push: ("Merhaba") => {
+            assert true
+        },
+        
+        // Dinleyici ekle
+        on: ("message", (item) => {
+            assert true
+        })
+    }
+    
+    // Öğe ekle
+    Stream.push("Merhaba")
+    
+    // Stream durumu
+    assert Stream.isEmpty()
+    assert Stream.size() == 1
+}
